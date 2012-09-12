@@ -61,13 +61,22 @@ class EdiTDT extends EdiElement{
     
     public function stringElement(){
         return 
-            $this->identifier.'+'.
-                $this->stageQualifier.'+'.
-            $this->convRefNr.'+'.
-            $this->mode.'+'.
-            $this->means.'+'.
-            $this->carrier.':'.$this->carrierCodeQualifier.':'.$this->carrirerCodeAgency.'+'.
-            //$this->transitDir.':'.$this->excessInfo.'+'.
+            $this->identifier.
+            '+'.
+            $this->stageQualifier.
+            '+'.
+            $this->convRefNr.
+            '+'.
+            $this->mode.
+            '+'.
+            $this->means.
+            '+'.
+            $this->carrier.':'.$this->carrierCodeQualifier.':'.$this->carrirerCodeAgency.
+            '+'.
+            //$this->transitDir.
+            '+'.
+            //$this->excessInfo.
+            '+'.    
             $this->transId.':'.$this->transIdCodeQual.':'.$this->tranIdRespAgency.':'.$this->transIdTransport.
             //'+'.$this->transOwnership.
             '\'';

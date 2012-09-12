@@ -46,7 +46,7 @@ class EdiMEA extends EdiElement{
             $this->identifier.'+'.
                 $this->qualifier.'+'.
             $this->details.':'.$this->detailsDimension.':'.$this->detailsSignificance.':'.$this->detailsAttrCoded.':'.$this->detailsAttr.'+'.
-            $this->unit.'+'.
+            $this->unit.':'.
             $this->value.'\'';
     }
 }
