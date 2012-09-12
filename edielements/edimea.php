@@ -42,12 +42,18 @@ class EdiMEA extends EdiElement{
     }
     
     public function stringElement(){
-        return 
-            $this->identifier.'+'.
-                $this->qualifier.'+'.
-            $this->details.':'.$this->detailsDimension.':'.$this->detailsSignificance.':'.$this->detailsAttrCoded.':'.$this->detailsAttr.'+'.
-            $this->unit.':'.
-            $this->value.'\'';
+        $string = 
+            $this->identifier.
+                '+'.
+            $this->qualifier.
+                '+';
+            if($this->details != ''){
+                $string .= $this->details.':'.$this->detailsDimension.':'.$this->detailsSignificance.':'.$this->detailsAttrCoded.':'.$this->detailsAttr;
+            }
+            $string .= '+'.
+            $this->unit.':'.$this->value.
+                '\'';
+            return $string;
     }
 }
 
